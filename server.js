@@ -10,6 +10,8 @@ const mongoose = require("mongoose");
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
+const User = require('./users');
+const router = require('./board')(app,User);
 const dbAddress = "mongodb+srv://cham0810:sarah0810@@cluster0.hnrex.mongodb.net/test";
 
 mongoose
